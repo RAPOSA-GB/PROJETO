@@ -1,0 +1,59 @@
+ketch.js
+21
+  textAlign(CENTER, CENTER);
+22
+}
+23
+​
+24
+function palavraParcial(minimo, maximo) {
+25
+  let quantidade = map(mouseX, minimo, maximo, 1, palavra.length);
+26
+  let parcial = palavra.substring(0, quantidade);
+27
+  return parcial;
+28
+}
+29
+​
+30
+function draw() {
+31
+  
+32
+  inicializaCores();
+33
+​
+34
+  let texto = palavraParcial(0, width);
+35
+    
+36
+  text(texto, 200, 200);
+37
+  
+38
+}
+39
+​
+40
+function modoNoturno(horario) {
+41
+  if (horario > 18) {
+42
+    console.log("Você precisa ligar o modo escuro!");
+43
+  } else {
+44
+    console.log("Modo noturno não é necessário neste momento.");
+45
+  }
+46
+}
+47
+​
+48
+modoNoturno(15);
+49
+modoNoturno(20);
